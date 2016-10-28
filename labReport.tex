@@ -1,0 +1,91 @@
+\documentclass[a4paper]{ctexrep}
+\usepackage[colorlinks,linkcolor=black]{hyperref}
+\usepackage{listings, geometry}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\setmonofont[Mapping={}]{Monaco}	%英文引号之类的正常显示，相当于设置英文字体
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ % 代码高亮
+	backgroundcolor=\color{white},   % choose the background color
+	basicstyle=\footnotesize\ttfamily,        % size of fonts used for the code
+	columns=fullflexible,
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=0.5em,		% how far the line-numbers are from the code
+	breaklines=true,                 % automatic line breaking only at whitespace
+	captionpos=b,                    % sets the caption-position to bottom
+	tabsize=4,
+	frame = single,
+	framexleftmargin=1em,
+	commentstyle=\color{mygreen},    % comment style
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	keywordstyle=\color{blue},       % keyword style
+	stringstyle=\color{mymauve}\ttfamily,     % string literal style
+	rulecolor=\color{black},
+	% identifierstyle=\color{red},
+	language=c++,
+	showtabs = false,
+	showstringspaces = false,
+	showspaces = false,
+}
+
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm}
+
+\hypersetup{
+	pdftitle={实验报告模板},
+	pdfauthor={Netcan},
+	pdfsubject={模板},
+	pdfkeywords={},
+}
+
+\ctexset {
+	chapter = {
+		name = {实验, },
+	},
+	section = {
+		number = \arabic{section},
+		format = \Large\bfseries,
+	}
+}
+
+\begin{document}
+	\begin{titlepage} % 封面
+		\begin{center}
+		\includegraphics[width=12cm]{cover.png}\\[1cm]
+		{\zihao{3} \kaishu \textbf{计算机与信息学院}\\[0.5cm]
+		\textbf{实验报告}\\[3cm]}
+		\begin{flushleft}
+			{\zihao{3} \songti 专业班级\\[0.5cm]
+			姓名学号\\[0.5cm]
+			教学班号\\[0.5cm]
+			任课教师\\[0.5cm]
+			指导教师\\[0.5cm]
+			专业班级\\[0.5cm]
+			实验地点}
+		\end{flushleft}
+		\vspace*{\fill}
+		{\zihao{3} \songti 2016～2017学年第一学期}
+		\end{center}
+	\end{titlepage}
+\tableofcontents % 目录
+\chapter{}
+\section{实验目的}
+
+\section{实验要求}
+
+\section{实验内容}
+
+\section{实验步骤}
+输出helloworld:
+
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+	printf("Hello World!\n");
+	return 0;
+}
+\end{lstlisting}
+\section{实验总结}
+
+\end{document}
